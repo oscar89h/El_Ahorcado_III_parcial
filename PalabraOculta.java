@@ -11,10 +11,11 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class PalabraOculta extends JPanel {
-
+      
       char[] letrasFalladas;
-
+      
       PalabraOculta() {
+            this.setLayout(new FlowLayout(FlowLayout.CENTER));
             Border lineBorder = BorderFactory.createLineBorder(Color.RED, 8); // Azul, grosor de 5
 
             // Agrega un margen al lado izquierdo (y otros lados si es necesario)
@@ -26,7 +27,7 @@ public class PalabraOculta extends JPanel {
             this.setBackground(Color.LIGHT_GRAY);
 
             // Establece el tamaño preferido del panel
-            this.setPreferredSize(new Dimension(100, 100)); // Ancho y alto deseados
+            this.setPreferredSize(new Dimension(300, 50)); // Ancho y alto deseados
 
             this.setLayout(new BorderLayout()); // permite centrar el JLabel
       }
@@ -67,11 +68,16 @@ public class PalabraOculta extends JPanel {
             for (int i = 0; i < palabraSeleccionada.length(); i++) {
                   palabraConGuines.append("_");
             }
-
             palabraOcultaLabel.setText(palabraConGuines.toString());
-
-
             this.add(palabraOcultaLabel, BorderLayout.CENTER);
+
+            palabraOcultaLabel.setFont(new Font("Arial", Font.BOLD, 20));
+            palabraOcultaLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    
+            // Agrega el JLabel al JPanel
+            this.add(palabraOcultaLabel);
+            this.revalidate(); // Actualiza el panel
+            this.repaint();
 
       }
 
