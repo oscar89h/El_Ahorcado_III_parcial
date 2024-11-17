@@ -9,7 +9,7 @@ public class VentanaMensaje extends JPanel {
       private JLabel etiqueta;
 
       VentanaMensaje() {
-            Border lineBorder = BorderFactory.createLineBorder(Color.RED, 8); // Azul, grosor de 5
+            Border lineBorder = BorderFactory.createLineBorder(Color.BLACK, 3); // Azul, grosor de 5
 
             // Agrega un margen al lado izquierdo (y otros lados si es necesario)
             Border margin = new EmptyBorder(10, 20, 10, 10); // Top, Left, Bottom, Right

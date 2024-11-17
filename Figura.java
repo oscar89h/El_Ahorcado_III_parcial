@@ -36,7 +36,7 @@ public class Figura extends JPanel {
 
       public Figura() {
             // Establece un borde azul alrededor del panel
-            Border lineBorder = BorderFactory.createLineBorder(Color.BLUE, 5); // Azul, grosor de 5
+            Border lineBorder = BorderFactory.createLineBorder(Color.BLACK, 2); // Azul, grosor de 5
 
             // Agrega un margen al lado izquierdo (y otros lados si es necesario)
             Border margin = new EmptyBorder(10, 20, 10, 10); // Top, Left, Bottom, Right
