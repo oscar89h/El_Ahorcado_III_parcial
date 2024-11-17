@@ -14,7 +14,7 @@ public class Main {
         // Crea un JFrame y agrega el panel personalizado
         JFrame frame = new JFrame("Dibujo con Java Swing");
 
-        PalabraOculta juego = new PalabraOculta();
+        PalabraOculta panelPalabraOcultaJpanel = new PalabraOculta();
 
         frame.setLayout(new BorderLayout());
         Figura panelDeFigura = new Figura();
@@ -25,16 +25,15 @@ public class Main {
 
         // frame.add(panelDeFigura);
         frame.add(panelDeFigura, BorderLayout.WEST);
-        frame.add(mensaje, BorderLayout.SOUTH); 
+        frame.add(mensaje, BorderLayout.SOUTH);
+        frame.add(panelPalabraOcultaJpanel, BorderLayout.CENTER);
 
-        juego.insertarPalabraOculta(palabraOculta);
-
-        frame.add(palabraOculta);
+        panelPalabraOcultaJpanel.insertarPalabraOculta(palabraOculta);
 
         String letraIngresada;
 
         letraIngresada = "e";
-        juego.actualizarPalabraOculta(palabraOculta, letraIngresada);
+        panelPalabraOcultaJpanel.actualizarPalabraOculta(palabraOculta, letraIngresada);
 
         // Configuración del JFrame
         frame.setSize(800, 600);

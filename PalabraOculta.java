@@ -1,13 +1,12 @@
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-
 import java.util.Random;
-import java.awt.Font;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -16,8 +15,7 @@ public class PalabraOculta extends JPanel {
       char[] letrasFalladas;
 
       PalabraOculta() {
-            // Establece un borde azul alrededor del panel
-            Border lineBorder = BorderFactory.createLineBorder(Color.BLUE, 5); // Azul, grosor de 5
+            Border lineBorder = BorderFactory.createLineBorder(Color.RED, 8); // Azul, grosor de 5
 
             // Agrega un margen al lado izquierdo (y otros lados si es necesario)
             Border margin = new EmptyBorder(10, 20, 10, 10); // Top, Left, Bottom, Right
@@ -25,8 +23,12 @@ public class PalabraOculta extends JPanel {
             // Combina el margen y el borde
             this.setBorder(BorderFactory.createCompoundBorder(margin, lineBorder));
 
+            this.setBackground(Color.LIGHT_GRAY);
+
             // Establece el tamaño preferido del panel
-            this.setPreferredSize(new Dimension(100, 50)); // Ancho y alto deseados
+            this.setPreferredSize(new Dimension(100, 100)); // Ancho y alto deseados
+
+            this.setLayout(new BorderLayout()); // permite centrar el JLabel
       }
 
       String[] palabras = {
@@ -68,6 +70,9 @@ public class PalabraOculta extends JPanel {
 
             palabraOcultaLabel.setText(palabraConGuines.toString());
 
+
+            this.add(palabraOcultaLabel, BorderLayout.CENTER);
+
       }
 
       public void actualizarPalabraOculta(JLabel palabraOculta, String letraIngresada) {
@@ -81,7 +86,6 @@ public class PalabraOculta extends JPanel {
 
             palabraOculta.setText(palabraConGuines.toString());
 
-            System.out.println(palabraOculta);
       }
 
 }
