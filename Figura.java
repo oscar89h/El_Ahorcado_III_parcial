@@ -16,22 +16,41 @@ public class Figura extends JPanel {
             g2d.setStroke(new BasicStroke(3));
 
             // Dibuja un círculo en relación al panel
-            g2d.setColor(Color.BLACK);
-            g2d.drawOval(110, 202, 40, 40); // Coordenadas relativas al panel Figura
 
             // Cambia el grosor del borde a 4 píxeles
             g2d.setStroke(new BasicStroke(4));
 
             // Dibuja un rectángulo
-            g2d.setColor(Color.RED);
-            g2d.fillRect(35, 150, 100, 5); // Línea horizontal
-            g2d.fillRect(35, 150, 5, 250); // Línea vertical
-            g2d.fillRect(130, 152, 5, 50); // Línea vertical corta
-
-            // Dibuja las partes del cuerpo en relación al panel
             g2d.setColor(Color.BLACK);
-            g2d.drawLine(60, 70, 80, 120); // Línea diagonal izquierda
-            g2d.drawLine(90, 70, 100, 120); // Línea diagonal derecha
+
+            g2d.fillRect(35, 40, 116, 5); // Línea horizontal
+            g2d.fillRect(35, 40, 5, 250); // Línea vertical
+            g2d.fillRect(146, 42, 5, 17); // Línea vertical corta
+
+            // partes del cuerpo
+
+            // cabeza
+            g2d.setColor(Color.BLACK);
+            g2d.drawOval(130, 60, 40, 40); // Coordenadas (x, y) y dimensiones (ancho, alto)
+
+            // Cambia el grosor del borde a 4 píxeles
+            g2d.setStroke(new BasicStroke(4));
+
+            // cuerpo
+            g2d.drawLine(150, 100, 150, 160); // Desde el centro inferior de la cabeza hacia abajo
+
+            // Brazo izquierdo
+            g2d.drawLine(150, 110, 120, 140);
+            // Brazo derecho
+            g2d.drawLine(150, 110, 180, 140);
+
+            // Pierna izquierda
+
+            g2d.drawLine(150, 160, 130, 200); // Desde el final del cuerpo hacia abajo y a la izquierda
+
+            // Pierna derecha
+            g2d.drawLine(150, 160, 170, 200); // Desde el final del cuerpo hacia abajo y a la derecha
+
       }
 
       public Figura() {
