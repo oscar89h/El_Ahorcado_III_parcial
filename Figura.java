@@ -5,6 +5,8 @@ import javax.swing.border.EmptyBorder;
 
 public class Figura extends JPanel {
 
+      
+
       @Override
       protected void paintComponent(Graphics g) {
             super.paintComponent(g);

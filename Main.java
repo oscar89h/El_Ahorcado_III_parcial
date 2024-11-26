@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Crea un JFrame y agrega el panel personalizado
-        JFrame frame = new JFrame("Dibujo con Java Swing");
+        JFrame frame = new JFrame("El Ahorcado");
 
         PalabraOculta panelPalabraOcultaJpanel = new PalabraOculta();
 
