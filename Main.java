@@ -32,7 +32,7 @@ public class Main {
 
         String letraIngresada;
 
-        letraIngresada = "e";
+        letraIngresada = "m";
         panelPalabraOcultaJpanel.actualizarPalabraOculta(palabraOculta, letraIngresada);
 
         // Configuración del JFrame

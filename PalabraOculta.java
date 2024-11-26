@@ -17,7 +17,7 @@ public class PalabraOculta extends JPanel {
 
       PalabraOculta() {
             this.setLayout(new FlowLayout(FlowLayout.CENTER));
-            Border lineBorder = BorderFactory.createLineBorder(Color.GREEN, 2); // Azul, grosor de 5
+            Border lineBorder = BorderFactory.createLineBorder(Color.BLACK, 2); // Azul, grosor de 5
 
             // Agrega un margen al lado izquierdo (y otros lados si es necesario)
             Border margin = new EmptyBorder(10, 20, 10, 10); // Top, Left, Bottom, Right
@@ -26,7 +26,7 @@ public class PalabraOculta extends JPanel {
             this.setBorder(BorderFactory.createCompoundBorder(margin, lineBorder));
 
             this.setBackground(Color.LIGHT_GRAY);
-
+            
             // Establece el tamaño preferido del panel
             this.setPreferredSize(new Dimension(100, 50)); // Ancho y alto deseados
 
@@ -71,14 +71,14 @@ public class PalabraOculta extends JPanel {
 
             String palabraSeleccionada = this.palabraSeleccionada();
 
-            Border bordePalabraOculta = BorderFactory.createLineBorder(Color.BLACK, 3);
+            //Border bordePalabraOculta = BorderFactory.createLineBorder(Color.BLACK, 3);
 
             palabraOcultaLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
             Font fuente = new Font("Arial", Font.BOLD, 20);
             palabraOcultaLabel.setFont(fuente);
 
-            palabraOcultaLabel.setBorder(bordePalabraOculta);
+            //palabraOcultaLabel.setBorder(bordePalabraOculta);
             StringBuilder palabraConGuines = new StringBuilder();
 
             for (int i = 0; i < palabraSeleccionada.length(); i++) {
