@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Jugadores {
+public class Jugador {
 
       Scanner scanner = new Scanner(System.in);
       String jugadorUno;
