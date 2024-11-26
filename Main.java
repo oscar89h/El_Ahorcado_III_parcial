@@ -11,19 +11,6 @@ import javax.swing.JLabel;
 public class Main {
 
     public static void main(String[] args) {
-       
-
-        
-
-        
-        
-
-        mensaje.insertMensaje("Nuevo mensaje dinamico.");
-
-        // frame.add(panelDeFigura);
-        
-
-        
-        
+       new Juego();
     }
 }

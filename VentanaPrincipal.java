@@ -18,6 +18,10 @@ public class VentanaPrincipal {
 
             JLabel palabraOculta = new JLabel();
 
+            mensaje.insertMensaje("Nuevo mensaje dinamico.");
+
+            // frame.add(panelDeFigura);
+
       }
       // Crea un JFrame y agrega el panel personalizado
 
