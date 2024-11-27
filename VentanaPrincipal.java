@@ -7,10 +7,11 @@ public class VentanaPrincipal {
       Figura panelDeFigura = new Figura();
       VentanaMensaje mensaje = new VentanaMensaje(); // instancia ventana mensaje
       PalabraOculta panelPalabraOcultaJpanel = new PalabraOculta();
+      Jugador ClaseJugador = new Jugador(); // clase jugador para que se vea el buton de incio y la etiqueta
+      public JFrame frame = new JFrame("El Ahorcado");
 
       public VentanaPrincipal() {
 
-            JFrame frame = new JFrame("El Ahorcado");
             frame.setSize(800, 600);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
@@ -29,6 +30,7 @@ public class VentanaPrincipal {
 
             marcoPrincipal.add(panelDeFigura, BorderLayout.WEST);
             marcoPrincipal.add(mensaje, BorderLayout.SOUTH);
+            marcoPrincipal.add(panelPalabraOcultaJpanel, BorderLayout.CENTER);
             marcoPrincipal.add(panelPalabraOcultaJpanel, BorderLayout.CENTER);
 
             return true;

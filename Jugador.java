@@ -1,25 +1,34 @@
-import java.util.Scanner;
+
+//import java.util.Scanner;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+
 
 public class Jugador {
 
-      Scanner scanner = new Scanner(System.in);
+     // Scanner scanner = new Scanner(System.in);
       String jugadorUno;
       String jugadorDos;
       int score;
+      JButton button = new JButton("Ingresar Nombre");
+      JTextArea texto = new JTextArea(5, 20);
+      JLabel label = new JLabel();
 
-      public void datosDeJugadores() {
-            System.out.println("Ingrese el nombre del jugador uno:");
-            jugadorUno = scanner.nextLine();
-
-            System.out.println("Ingrese el nombre del jugador dos:");
-            jugadorDos = scanner.nextLine();
-
-            System.out.println("Jugador uno: " + jugadorUno);
-            System.out.println("Jugador dos: " + jugadorDos);
+      public void IngresarNombre() {
+            button.addActionListener(new ActionListener() {
+                  @Override
+                  public void actionPerformed(ActionEvent e) {
+                        String inputText = texto.getText();
+                        label.setText(inputText);
+                  }
+            });
       }
 
       public void guardarEnLS() {
-            
+
       }
 
 }
