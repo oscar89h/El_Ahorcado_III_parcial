@@ -3,7 +3,6 @@ import java.awt.*;
 
 public class Juego {
 
-     
       PalabraOculta palabraOcultaClass = new PalabraOculta();
 
       public Juego() {
@@ -34,7 +33,6 @@ public class Juego {
                   JOptionPane.showMessageDialog(ventanaPrincipal, "Hola, " + nombre + "! Bienvenido al juego.");
                   Figura figura = new Figura();
                   ventanaPrincipal.add(figura);
-                  
 
             } else {
                   JOptionPane.showMessageDialog(ventanaPrincipal,
