@@ -64,8 +64,8 @@ public class Figura extends JPanel {
 
             // Combina el margen y el borde
             this.setBorder(BorderFactory.createCompoundBorder(margin, lineBorder));
-
             // Establece el tamaño preferido del panel
             this.setPreferredSize(new Dimension(250, 200)); // Ancho y alto deseados
+            
       }
 }

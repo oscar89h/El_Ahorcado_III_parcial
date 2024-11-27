@@ -1,5 +1,5 @@
 import javax.swing.BorderFactory;
-import javax.swing.JFrame;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -7,9 +7,6 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-import java.util.Random;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 public class PalabraOculta extends JPanel {
 
@@ -63,8 +60,8 @@ public class PalabraOculta extends JPanel {
 
       };
 
-      public void insertarPalabraOculta(JLabel palabraOcultaLabel) {
-
+      public void insertarPalabraOculta() {
+            JLabel palabraOcultaLabel = new JLabel();
             palabraOcultaLabel.setPreferredSize(new Dimension(50, 25));
 
             // palabraOcultaLabel.setLayout(new FlowLayout(FlowLayout.CENTER));

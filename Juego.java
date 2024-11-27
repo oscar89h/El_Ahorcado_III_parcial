@@ -1,8 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-
 public class Juego {
+
+     
+      PalabraOculta palabraOcultaClass = new PalabraOculta();
 
       public Juego() {
             // Crear la ventana principal (JFrame)
@@ -13,11 +15,11 @@ public class Juego {
 
             // Crear un panel de fondo rojo
             JPanel panel = new JPanel();
-            panel.setBackground(Color.RED);
+            panel.setBackground(Color.GRAY);
             panel.setLayout(new BorderLayout(10, 10));
 
             // Crear un JLabel para mostrar el mensaje de bienvenida
-            JLabel label = new JLabel("¡Bienvenido al Juego!", JLabel.CENTER);
+            JLabel label = new JLabel("Bienvenido al Juego del Ahorcado", JLabel.CENTER);
             label.setForeground(Color.WHITE);
             panel.add(label, BorderLayout.CENTER);
 
@@ -30,6 +32,10 @@ public class Juego {
             // Verificar si el nombre es válido
             if (nombre != null && !nombre.trim().isEmpty()) {
                   JOptionPane.showMessageDialog(ventanaPrincipal, "Hola, " + nombre + "! Bienvenido al juego.");
+                  Figura figura = new Figura();
+                  ventanaPrincipal.add(figura);
+                  
+
             } else {
                   JOptionPane.showMessageDialog(ventanaPrincipal,
                               "No ingresaste un nombre, por favor intenta de nuevo.");
@@ -39,7 +45,4 @@ public class Juego {
             ventanaPrincipal.setVisible(true);
       }
 
-      public static void main(String[] args) {
-            new Juego(); // Crear una nueva instancia de Juego
-      }
 }
