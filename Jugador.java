@@ -3,8 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Jugador {
-      String jugadorUno;
-      String jugadorDos;
+      String jugador;
       int score;
 
       JButton button = new JButton("Ingresar Nombre");
@@ -17,8 +16,8 @@ public class Jugador {
                   public void actionPerformed(ActionEvent e) {
                         String inputText = texto.getText().trim();
                         if (!inputText.isEmpty()) {
-                              jugadorUno = inputText;
-                              label.setText("Nombre guardado: " + jugadorUno);
+                              jugador = inputText;
+                              label.setText("Nombre guardado: " + jugador);
                         } else {
                               JOptionPane.showMessageDialog(null, "Por favor, introduce un nombre.", "Error",
                                           JOptionPane.ERROR_MESSAGE);
