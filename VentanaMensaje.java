@@ -18,7 +18,7 @@ public class VentanaMensaje extends JPanel {
             this.setBorder(BorderFactory.createCompoundBorder(margin, lineBorder));
 
             // Establece el tamaño preferido del panel
-            this.setPreferredSize(new Dimension(300, 100)); // Ancho y alto deseados
+            this.setPreferredSize(new Dimension(300, 200)); // Ancho y alto deseados
 
             // Crea la etiqueta inicial
             etiqueta = new JLabel("Texto inicial");

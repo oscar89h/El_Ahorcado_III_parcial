@@ -22,10 +22,10 @@ public class PalabraOculta extends JPanel {
             // Combina el margen y el borde
             this.setBorder(BorderFactory.createCompoundBorder(margin, lineBorder));
 
-            this.setBackground(Color.LIGHT_GRAY);
+            //this.setBackground(Color.GREEN);
             
             // Establece el tamaño preferido del panel
-            this.setPreferredSize(new Dimension(100, 50)); // Ancho y alto deseados
+            //this.setPreferredSize(new Dimension(100, 50)); // Ancho y alto deseados
 
             this.setLayout(new BorderLayout()); // permite centrar el JLabel
 

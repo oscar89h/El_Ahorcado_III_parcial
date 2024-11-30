@@ -2,8 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Juego {
-
+      UsuarioDatos usuarioDatos = new UsuarioDatos();
       PalabraOculta palabraOcultaClass = new PalabraOculta();
+      VentanaMensaje textoAbajo = new VentanaMensaje();
 
       public Juego() {
             // Crear la ventana principal (JFrame)
@@ -33,11 +34,17 @@ public class Juego {
                   JOptionPane.showMessageDialog(ventanaPrincipal, "Hola, " + nombre + "! Bienvenido al juego.");
                   Figura figura = new Figura();
                   ventanaPrincipal.add(figura);
+                  ventanaPrincipal.add(palabraOcultaClass, BorderLayout.EAST);
+                  ventanaPrincipal.add(textoAbajo, BorderLayout.SOUTH);
+                  palabraOcultaClass.insertarPalabraOculta();
 
             } else {
                   JOptionPane.showMessageDialog(ventanaPrincipal,
                               "No ingresaste un nombre, por favor intenta de nuevo.");
             }
+
+            // Guardar datos del jugador con un puntaje inicial de 0
+            usuarioDatos.guardarDatos(nombre, 0);
 
             // Hacer visible la ventana
             ventanaPrincipal.setVisible(true);
